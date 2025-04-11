@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="password-display">
+            <input type="text" id="password" readonly>
+            <button id="copy-btn"><i class="fas fa-copy"></i></button>
+            <button id="download-btn"><i class="fas fa-download"></i></button>
+        </div>
+        <div class="settings">
+            <div class="setting">
+                <label for="length">Password Length: <span id="length-value">12</span></label>
+                <input type="range" id="length" min="4" max="32" value="12">
+            </div>
+            <div class="setting">
+                <input type="checkbox" id="uppercase" checked>
+                <label for="uppercase">Include Uppercase Letters (A-Z)</label>
+            </div>
+            <div class="setting">
+                <input type="checkbox" id="lowercase" checked>
+                <label for="lowercase">Include Lowercase Letters (a-z)</label>
+            </div>
+            <div class="setting">
+                <input type="checkbox" id="numbers" checked>
+                <label for="numbers">Include Numbers (0-9)</label>
+            </div>
+            <div class="setting">
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Include Symbols (!@#$%^&*)</label>
+            </div>
+        </div>
+        <button id="generate-btn">Generate Password</button>
+        <div class="strength-meter">
+            <div class="strength-label">Password Strength:</div>
+            <div class="strength-bars">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
