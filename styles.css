@@ -1,0 +1,179 @@
+:root {
+    --primary-color: #6200ee;
+    --primary-dark: #3700b3;
+    --secondary-color: #03dac6;
+    --background: #f5f5f5;
+    --text: #333;
+    --text-light: #666;
+    --border: #ddd;
+    --error: #b00020;
+    --success: #4caf50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.password-display {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.password-display input {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+.password-display button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.password-display button:hover {
+    background-color: var(--primary-dark);
+}
+
+.settings {
+    margin-bottom: 25px;
+}
+
+.setting {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.setting label {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.setting input[type="range"] {
+    width: 100%;
+    margin-top: 5px;
+}
+
+#length {
+    margin-top: 10px;
+}
+
+#length-value {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: var(--primary-dark);
+}
+
+.strength-meter {
+    margin-top: 20px;
+}
+
+.strength-label {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.strength-bars {
+    display: flex;
+    gap: 5px;
+}
+
+.bar {
+    height: 8px;
+    flex: 1;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+/* Strength colors */
+.weak {
+    background-color: #ff5252;
+}
+
+.fair {
+    background-color: #ffb74d;
+}
+
+.good {
+    background-color: #64b5f6;
+}
+
+.strong {
+    background-color: #4caf50;
+}
+
+/* Toast notification */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--primary-dark);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
